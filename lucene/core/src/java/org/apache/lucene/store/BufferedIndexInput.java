@@ -24,7 +24,7 @@ import java.io.IOException;
 public abstract class BufferedIndexInput extends IndexInput implements RandomAccessInput {
 
   /** Default buffer size set to {@value #BUFFER_SIZE}. */
-  public static final int BUFFER_SIZE = 1024;
+  public static final int BUFFER_SIZE = 1024*16;
   
   /** Minimum buffer size allowed */
   public static final int MIN_BUFFER_SIZE = 8;
@@ -38,7 +38,7 @@ public abstract class BufferedIndexInput extends IndexInput implements RandomAcc
   /**
    * A buffer size for merges set to {@value #MERGE_BUFFER_SIZE}.
    */
-  public static final int MERGE_BUFFER_SIZE = 4096;
+  public static final int MERGE_BUFFER_SIZE = 4096*16;
 
   private int bufferSize = BUFFER_SIZE;
   
